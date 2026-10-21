@@ -16,6 +16,10 @@ in Storybook and covered by unit tests (see `INSTRUCTIONS.md`):
 2. **Car List** — a list of Car Blocks, one for every car in
    `src/assets/response.json`.
 
+Design source:
+[CarTrawler Technical Assessment — Figma](https://www.figma.com/design/JlbW0v2Tmf6kybsOEFyhGx/CarTrawler-Technical-Assesment?node-id=10308-24250&t=JXUySO69t2VzVSnO-0)
+(also linked in `INSTRUCTIONS.md`).
+
 Constraints:
 
 - Both components must be **responsive** across mobile, tablet and desktop.
@@ -35,26 +39,26 @@ Constraints:
 
 ### 1. Styling
 
-| Option                                                | Pros                                                                              | Cons                                                                         |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| **Plain colocated CSS using design-system tokens**    | Matches the `Counter` pattern; tokens and `.ts-*` classes used directly; no deps  | Class naming discipline is manual                                            |
-| CSS Modules                                           | Scoped class names                                                                | Extra convention not used by the starter; stories and tests need no benefit  |
-| Tailwind or CSS-in-JS                                 | Fast to write                                                                     | New dependency; duplicates the existing design system; against the brief     |
-| Inline styles                                         | No stylesheet                                                                     | No media queries or pseudo-states; encourages hard-coded values              |
+| Option                                             | Pros                                                                             | Cons                                                                        |
+| -------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Plain colocated CSS using design-system tokens** | Matches the `Counter` pattern; tokens and `.ts-*` classes used directly; no deps | Class naming discipline is manual                                           |
+| CSS Modules                                        | Scoped class names                                                               | Extra convention not used by the starter; stories and tests need no benefit |
+| Tailwind or CSS-in-JS                              | Fast to write                                                                    | New dependency; duplicates the existing design system; against the brief    |
+| Inline styles                                      | No stylesheet                                                                    | No media queries or pseudo-states; encourages hard-coded values             |
 
 ### 2. Component structure
 
-| Option                                                       | Pros                                                          | Cons                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------- | --------------------------------------- |
-| One monolithic `CarBlock`                                    | Fewest files                                                  | Hard to test, read and reuse            |
-| **`CarBlock` composed of small presentational sub-components** | Each piece is testable and readable; clean, well-typed props | More files; needs a sensible split      |
+| Option                                                         | Pros                                                         | Cons                               |
+| -------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| One monolithic `CarBlock`                                      | Fewest files                                                 | Hard to test, read and reuse       |
+| **`CarBlock` composed of small presentational sub-components** | Each piece is testable and readable; clean, well-typed props | More files; needs a sensible split |
 
 ### 3. Data and types
 
-| Option                                                           | Pros                                                       | Cons                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------- |
-| Import `response.json` and let TypeScript infer types            | Zero effort                                                | Literal-inferred types; fragile; no docs |
-| **Dedicated types file modelled on `response.json`**             | Explicit, reusable by components, tests and stories        | Must be kept in sync with the fixture    |
+| Option                                                | Pros                                                | Cons                                     |
+| ----------------------------------------------------- | --------------------------------------------------- | ---------------------------------------- |
+| Import `response.json` and let TypeScript infer types | Zero effort                                         | Literal-inferred types; fragile; no docs |
+| **Dedicated types file modelled on `response.json`**  | Explicit, reusable by components, tests and stories | Must be kept in sync with the fixture    |
 
 `CarBlock` receives a single `Car`; `CarList` receives `Car[]`. Components do
 not import the JSON themselves, so they stay reusable and easy to feed edge
@@ -62,25 +66,25 @@ case data.
 
 ### 4. Responsiveness
 
-| Option                                                  | Pros                                                       | Cons                                                              |
-| ------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------- |
-| **Mobile-first `min-width` media queries**              | Simple, universal, matches the design-system breakpoints   | `var(--breakpoint-*)` cannot be used in `@media`; literals needed |
-| Container queries                                       | Component adapts to its container                          | Breakpoints in the design system are viewport-based               |
-| JS-based breakpoints (`matchMedia` hooks)               | Conditional rendering possible                             | Extra runtime logic, flicker, harder to test                      |
+| Option                                     | Pros                                                     | Cons                                                              |
+| ------------------------------------------ | -------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Mobile-first `min-width` media queries** | Simple, universal, matches the design-system breakpoints | `var(--breakpoint-*)` cannot be used in `@media`; literals needed |
+| Container queries                          | Component adapts to its container                        | Breakpoints in the design system are viewport-based               |
+| JS-based breakpoints (`matchMedia` hooks)  | Conditional rendering possible                           | Extra runtime logic, flicker, harder to test                      |
 
 ### 5. Testing
 
-| Option                                                    | Pros                                         | Cons                                       |
-| --------------------------------------------------------- | -------------------------------------------- | ------------------------------------------ |
-| **Testing Library by role and text, using fixture data**  | Tests behaviour users see; resilient         | Slightly more verbose                      |
-| Snapshot tests                                            | Quick to write                               | Brittle, low signal, noisy diffs           |
+| Option                                                   | Pros                                 | Cons                             |
+| -------------------------------------------------------- | ------------------------------------ | -------------------------------- |
+| **Testing Library by role and text, using fixture data** | Tests behaviour users see; resilient | Slightly more verbose            |
+| Snapshot tests                                           | Quick to write                       | Brittle, low signal, noisy diffs |
 
 ### 6. Cars with several `rentalRates`
 
-| Option                                                   | Pros                                  | Cons                                           |
-| -------------------------------------------------------- | ------------------------------------- | ---------------------------------------------- |
-| **Render one rate: the one with the best relevance**     | Matches a "single result card" design | Must confirm the rule against Figma and data   |
-| Render all rates in the block                            | Shows everything                      | Not what the design shows; clutters the card   |
+| Option                                               | Pros                                  | Cons                                         |
+| ---------------------------------------------------- | ------------------------------------- | -------------------------------------------- |
+| **Render one rate: the one with the best relevance** | Matches a "single result card" design | Must confirm the rule against Figma and data |
+| Render all rates in the block                        | Shows everything                      | Not what the design shows; clutters the card |
 
 ## Decision
 
