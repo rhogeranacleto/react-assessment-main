@@ -85,10 +85,6 @@ No existing variable equals `1.125rem` (the nearest are `--space-200` and `--spa
 - Add `--font-size-*` and `--line-height-*` variables to `design-system.css` (needs approval) and switch the title to them.
 - If the design system's typography values change, update these variables by hand: nothing links them to the `.ts-*` classes.
 
-## Car Block breakpoints differ from the design-system ones (temporary)
-
-The Car Block media queries currently use `min-width` 400px (Medium), 700px (Large) and 870px (XL) so the layouts can be checked at those viewport widths. They are not design-system breakpoints (`--breakpoint-mobile` 608px, `--breakpoint-tablet` 840px, `--breakpoint-desktop-small` 1025px), and no `--breakpoint-*` variable matches them. Each query has a comment saying so. Before finishing, either map them back to the design-system values or document the final ones; the spec (`docs/design/car-block-and-car-list/spec.md`) and the plan still list 608/840/1025px.
-
 ## "Free Cancellation" cannot be seen as in Figma with the fixture
 
 Figma shows the green "Free Cancellation" badge on every card, but `src/assets/response.json` has no free cancellation: all 5 rates carry a cancellation fee. With the real data every card therefore renders the neutral "Cancellation fee €X" badge, and the Figma look cannot be reproduced in `npm run dev` or in the `CarList` stories.

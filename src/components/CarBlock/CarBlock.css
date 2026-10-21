@@ -1,4 +1,4 @@
-/* Small (below the mobile breakpoint) base styles; larger sizes override custom properties below. */
+/* Small (below --breakpoint-mobile) base styles; larger sizes override custom properties below. */
 .car-block {
   --car-block-media-height: var(--space-1400);
   --car-block-media-inset: var(--space-100);
@@ -283,9 +283,8 @@
   clip-path: inset(50%);
 }
 
-/* Medium: 400px, a temporary value for visual checks (design-system
-   --breakpoint-mobile is 608px) */
-@media (min-width: 400px) {
+/* Medium: --breakpoint-mobile */
+@media (min-width: 608px) {
   .car-block {
     --car-block-media-height: calc(var(--space-1400) + var(--space-200));
     --car-block-padding: var(--space-200);
@@ -300,9 +299,8 @@
   }
 }
 
-/* Large: 700px, a temporary value for visual checks (design-system
-   --breakpoint-tablet is 840px) */
-@media (min-width: 700px) {
+/* Large: --breakpoint-tablet */
+@media (min-width: 840px) {
   .car-block {
     --car-block-media-height: auto;
     --car-block-media-inset: var(--space-200);
@@ -331,9 +329,8 @@
   }
 }
 
-/* XL: 870px, a temporary value for visual checks (design-system
-   --breakpoint-desktop-small is 1025px) */
-@media (min-width: 870px) {
+/* XL: --breakpoint-desktop-small */
+@media (min-width: 1025px) {
   .car-block {
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   }
