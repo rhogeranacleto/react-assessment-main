@@ -34,13 +34,20 @@ npm run build-storybook
 ```
 src/
   assets/response.json     # fixture: { productType, searchId, responseTime, cars[], vendors[], locations[] }
-  components/              # Counter.* is the example; follow its pattern
-    X.tsx / X.css / X.test.tsx / X.stories.tsx
+  types/carRental.ts       # types shared by several features, modelled on response.json (no runtime code)
+  data/searchResponse.ts   # the fixture typed as SearchResponse (components never import the JSON)
+  components/              # one folder per feature; CarBlock/ is the pattern to follow
+    CarList/               # CarList.tsx/.css/.test.tsx/.stories.tsx + index.ts
+    CarBlock/              # CarBlock.tsx/.css/.test.tsx/.stories.tsx + index.ts
+      money.ts             # formatMoney / divideMoney / isZeroMoney (only place that parses Money.amount); tests next to it
+      carRental.ts         # selectRate + formatters for the card; tests next to it
+      Badge/ Features/ Location/ Media/ Price/ Vendor/   # sub-features, each X.tsx + X.test.tsx + index.ts (no stories)
+      Icons/               # inline SVG icons used by Features and Media (no icon dependency)
   design-system.css        # tokens + typography utility classes (source of truth for styling)
-  App.tsx, main.tsx, index.css
+  App.tsx, App.css, main.tsx
 docs/
   adr/                     # architecture decision records (0001 = Car Block / Car List)
-  design/<slug>/           # generated Figma specs (spec.md, spec.json, screenshots/)
+  design/<slug>/           # design specs (spec.md, ...); car-block-and-car-list/spec.md is manual, derived from the PNGs in docs/design/ because Figma was not exportable
   plans/                   # development plans written by the architect agent
 .claude/skills/figma-spec/ # skill that turns a Figma link into docs/design/<slug>/
 .claude/skills/commit/     # skill that commits with the commitlint conventional format
@@ -65,18 +72,19 @@ There is no user-story step; the ADR acceptance criteria are the requirements.
 
 ### Agents (`.claude/agents/`)
 
-| Agent       | Role                                                                                                                                                                                                                                             | May edit                          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
-| architect   | Reads the ADR, gets the Figma spec via the `figma-spec` skill, writes the detailed plan as a DRAFT and stops at the approval gate.                                                                                                                | `docs/plans/` only                |
-| implementer | Reads an APPROVED plan and builds it with the project standards: tokens-only CSS, colocated component/test/stories, strict TS. Refuses to start on a non-APPROVED plan, never calls Figma, runs lint/test/build/format:check before reporting. | `src/` and the plan's checkboxes  |
+| Agent         | Role                                                                                                                                                                                                                                                                                                                                                                        | May edit                                 |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| architect     | Reads the ADR, gets the Figma spec via the `figma-spec` skill, writes the detailed plan as a DRAFT and stops at the approval gate.                                                                                                                                                                                                                                          | `docs/plans/` only                       |
+| implementer   | Reads an APPROVED plan and builds it with the project standards: tokens-only CSS, colocated component/test/stories, strict TS. Refuses to start on a non-APPROVED plan, never calls Figma, runs lint/test/build/format:check before reporting.                                                                                                                              | `src/` and the plan's checkboxes         |
 | qa-specialist | Feature-agnostic: audits the code against any approved plan and its ADR criteria, writes success-path tests for at least 80% coverage of the changed code (coverage needs `@vitest/coverage-v8`; ask before adding it), runs the app for the human to review (against the design spec when there is one), and waits for final human approval. Never fixes application code. | `*.test.ts(x)` and the plan's QA section |
 
 The implementer stops and reports (instead of deviating) if the plan is wrong or ambiguous; scope or design changes send the plan back to DRAFT for re-approval. Visual fidelity still needs a human check in Storybook.
 
 ## Architecture & conventions
 
-- **Imports**: use the `@/` alias for anything under `src/` (`import Counter from "@/components/Counter"`). Relative imports only for same-folder siblings (as in Counter's test/story).
-- **Colocation**: each component lives in `src/components/` with its `.css`, `*.test.tsx` and `*.stories.tsx` next to it. Components are exported both named and default (see `Counter.tsx`).
+- **Imports**: use the `@/` alias for anything under `src/` (`import CarList from "@/components/CarList"`). Relative imports only inside one feature folder: siblings and descendants (`./Badge`, `./money`), never `../`. Cross-feature imports go through the other feature's `index.ts`, not its internals.
+- **Feature folders**: each feature is a folder `src/components/<Feature>/` holding the component and everything only it needs: `.css`, `*.test.tsx`, `*.stories.tsx`, helpers, and an `index.ts` re-exporting the component (named and default). A feature made of several parts nests them directly under it as sub-feature folders (`CarBlock/Badge/`), with no intermediate `components/` folder, and recurses with the same rules. File names match their folder (`Badge/Badge.tsx`). Stories for top-level features; sub-features get tests, plus a story only when comparing their variants visually helps (title `Components/<Feature>/<Sub>`, e.g. `CarBlock/Badge`). Anything used by two or more features moves up to the lowest common parent (types and fixture data shared app-wide stay in `src/types/` and `src/data/`). A dependency used only by sibling sub-features (e.g. `Icons/`) is its own sub-feature folder under their parent.
+- **Styling files**: one `.css` per feature folder, imported by the feature's root component; sub-features may use the parent's classes (BEM-style `car-block__badge`) or add their own `.css` if they grow. Components are exported both named and default (see `CarBlock.tsx`).
 - **Props**: declare a `type XProps` above the component with JSDoc on each prop; Storybook `argTypes` mirror them.
 - **Styling**: plain CSS files imported by the component (no CSS-in-JS/Tailwind). Style **only** with design-system tokens — never hard-code colors, px spacing, radii or font sizes if a token exists:
   - Colors: `--text-*`, `--bg-fill-*`, `--border-*`, `--button-*`, `--price-*`, `--surface-*`, `--container-*`, etc.
@@ -120,4 +128,3 @@ The implementer stops and reports (instead of deviating) if the plan is wrong or
 - `src/assets/response.json` (fixture; build edge cases as story/test data derived from it).
 - Tooling config: `vite.config.ts`, `tsconfig*.json`, `eslint.config.js`, `.prettierrc.json`, `commitlint.config.js`, `.husky/*`, `.storybook/*`, `package.json` dependencies.
 - Don't add new dependencies without asking. Never commit `node_modules`, `dist` or `storybook-static`.
-- `Counter.*` is starter scaffolding; remove it (and its `App.tsx` usage) only as part of replacing it with the real solution.
