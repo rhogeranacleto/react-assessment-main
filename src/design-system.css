@@ -1,0 +1,510 @@
+/* CSS variables for the design system */
+html:root {
+  --background-default: rgb(255, 255, 255);
+  --background-subtle: rgb(248, 248, 248);
+  --surface-default: rgb(255, 255, 255);
+  --surface-alt: rgb(248, 248, 248);
+  --surface-brand-primary: rgb(0, 210, 168);
+  --surface-brand-secondary: rgb(15, 0, 40);
+  --container-default: rgb(255, 255, 255);
+  --container-subtle: rgb(248, 248, 248);
+  --container-alt: rgb(242, 242, 242);
+  --container-hover: rgb(242, 242, 242);
+  --container-active: rgb(229, 229, 229);
+  --container-selected: rgb(204, 204, 204);
+  --container-disabled: rgb(248, 248, 248);
+  --bg-fill-white: rgb(255, 255, 255);
+  --bg-fill-disabled: rgb(204, 204, 204);
+  --bg-fill-transparent: rgba(255, 255, 255, 0);
+  --bg-fill-brand-primary: rgb(0, 184, 131);
+  --bg-fill-brand-primary-subtle: rgb(222, 247, 241);
+  --bg-fill-brand-secondary: rgb(15, 0, 40);
+  --bg-fill-brand-secondary-subtle: rgb(227, 227, 233);
+  --bg-fill-loyalty: rgb(0, 177, 254);
+  --bg-fill-loyalty-subtle: rgb(225, 246, 255);
+  --bg-fill-preferred: rgb(212, 0, 42);
+  --bg-fill-preferred-subtle: rgb(255, 235, 239);
+  --bg-fill-insurance: rgb(0, 30, 112);
+  --bg-fill-insurance-subtle: rgb(230, 233, 244);
+  --bg-fill-neutral: rgb(34, 34, 34);
+  --bg-fill-neutral-subtle: rgb(242, 242, 242);
+  --bg-fill-grey: rgb(181, 181, 181);
+  --bg-fill-grey-subtle: rgb(248, 248, 248);
+  --bg-fill-positive-strong: rgb(16, 126, 62);
+  --bg-fill-positive-subtle: rgb(230, 245, 235);
+  --bg-fill-negative-strong: rgb(201, 25, 17);
+  --bg-fill-negative-subtle: rgb(255, 234, 236);
+  --bg-fill-warning-strong: rgb(224, 104, 7);
+  --bg-fill-warning-subtle: rgb(253, 242, 224);
+  --bg-fill-caution-strong: rgb(243, 161, 42);
+  --bg-fill-caution-subtle: rgb(253, 242, 224);
+  --bg-fill-info-strong: rgb(10, 110, 209);
+  --bg-fill-info-subtle: rgb(226, 241, 253);
+  --bg-fill-accent-strong: rgb(167, 0, 116);
+  --bg-fill-accent-subtle: rgb(255, 230, 243);
+  --bg-fill-sale: rgb(201, 25, 17);
+  --bg-fill-sale-subtle: rgb(255, 234, 236);
+  --bg-fill-gradient-sale: linear-gradient(
+    0deg,
+    rgb(234, 110, 102) 0%,
+    rgb(214, 35, 25) 100%
+  );
+  --bg-fill-gradient-campaign: linear-gradient(
+    0deg,
+    rgb(0, 136, 87) 0%,
+    rgb(0, 210, 168) 100%
+  );
+  --bg-fill-gradient-special: linear-gradient(
+    180deg,
+    rgb(12, 110, 209) 0%,
+    rgb(92, 174, 246) 100%
+  );
+  --bg-fill-gradient-accent: linear-gradient(
+    0deg,
+    rgb(248, 248, 248) 0%,
+    rgb(229, 229, 229) 100%
+  );
+  --bg-fill-gradient-loyalty: linear-gradient(
+    0deg,
+    rgb(0, 94, 164) 0%,
+    rgb(0, 177, 254) 100%
+  );
+  --border-default: rgb(204, 204, 204);
+  --border-subtle: rgb(229, 229, 229);
+  --border-hover: rgb(160, 160, 160);
+  --border-active: rgb(98, 98, 98);
+  --border-disabled: rgb(229, 229, 229);
+  --border-focus: rgb(12, 110, 209);
+  --border-neutral: rgb(181, 181, 181);
+  --border-positive: rgb(16, 126, 62);
+  --border-negative: rgb(201, 25, 17);
+  --border-caution: rgb(243, 161, 42);
+  --border-warning: rgb(224, 104, 7);
+  --border-insurance: rgb(0, 30, 112);
+  --border-brand: rgb(15, 0, 40);
+  --ratings-excellent: rgb(16, 126, 62);
+  --ratings-very-good: rgb(29, 144, 73);
+  --ratings-good: rgb(48, 177, 95);
+  --ratings-average: rgb(245, 177, 78);
+  --ratings-poor: rgb(234, 110, 102);
+  --ratings-star: rgb(241, 146, 13);
+  --text-default: rgb(0, 0, 0);
+  --text-subtle: rgb(51, 51, 51);
+  --text-grey: rgb(98, 98, 98);
+  --text-disabled: rgb(160, 160, 160);
+  --text-inverse: rgb(255, 255, 255);
+  --text-on-fill: rgb(0, 0, 0);
+  --text-brand-primary: rgb(0, 152, 101);
+  --text-brand-secondary: rgb(15, 0, 40);
+  --text-loyalty: rgb(0, 94, 164);
+  --text-insurance: rgb(45, 74, 166);
+  --text-positive: rgb(16, 126, 62);
+  --text-negative: rgb(201, 25, 17);
+  --text-warning: rgb(191, 72, 5);
+  --text-caution: rgb(224, 104, 7);
+  --text-info: rgb(10, 110, 209);
+  --text-accent: rgb(167, 0, 116);
+  --text-sale: rgb(201, 25, 17);
+  --link-brand-default: rgb(0, 152, 101);
+  --link-brand-hover: rgb(0, 106, 58);
+  --link-brand-selected: rgb(0, 106, 58);
+  --link-default: rgb(3, 141, 242);
+  --link-hover: rgb(12, 110, 209);
+  --link-selected: rgb(7, 63, 160);
+  --button-bg-primary: rgb(0, 210, 168);
+  --button-bg-primary-hover: rgb(0, 152, 101);
+  --button-bg-primary-active: rgb(0, 184, 131);
+  --button-bg-primary-disabled: rgb(222, 247, 241);
+  --button-bg-secondary: rgb(15, 0, 40);
+  --button-bg-secondary-hover: rgb(31, 29, 73);
+  --button-bg-secondary-active: rgb(24, 21, 62);
+  --button-bg-secondary-disabled: rgb(227, 227, 233);
+  --button-bg-minimal: rgb(255, 255, 255);
+  --button-bg-minimal-hover: rgb(229, 229, 229);
+  --button-bg-minimal-active: rgb(204, 204, 204);
+  --button-bg-minimal-disabled: rgb(229, 229, 229);
+  --button-bg-semantic: rgb(214, 35, 25);
+  --button-bg-semantic-hover: rgb(187, 3, 0);
+  --button-bg-semantic-active: rgb(234, 110, 102);
+  --button-bg-semantic-disabled: rgb(255, 234, 236);
+  --button-text-disabled: rgb(160, 160, 160);
+  --button-text-primary: rgb(15, 0, 40);
+  --button-text-secondary: rgb(255, 255, 255);
+  --button-text-minimal: rgb(0, 0, 0);
+  --button-text-semantic: rgb(255, 255, 255);
+  --button-border-primary: rgb(0, 210, 168);
+  --button-border-primary-hover: rgb(0, 152, 101);
+  --button-border-primary-active: rgb(0, 184, 131);
+  --button-border-primary-disabled: rgb(222, 247, 241);
+  --button-border-secondary: rgb(15, 0, 40);
+  --button-border-secondary-hover: rgb(31, 29, 73);
+  --button-border-secondary-active: rgb(24, 21, 62);
+  --button-border-secondary-disabled: rgb(227, 227, 233);
+  --button-border-minimal: rgb(0, 0, 0);
+  --button-border-minimal-hover: rgb(0, 0, 0);
+  --button-border-minimal-active: rgb(98, 98, 98);
+  --button-border-minimal-disabled: rgb(160, 160, 160);
+  --button-border-semantic: rgb(214, 35, 25);
+  --button-border-semantic-hover: rgb(187, 3, 0);
+  --button-border-semantic-active: rgb(234, 110, 102);
+  --button-border-semantic-disabled: rgb(255, 234, 236);
+  --overlay-dark: rgba(0, 0, 0, 0.4);
+  --overlay-light: rgba(255, 255, 255, 0.8);
+  --header-bg: rgb(255, 255, 255);
+  --header-bg-alt: rgb(15, 0, 40);
+  --header-object: rgb(15, 0, 40);
+  --header-object-alt: rgb(255, 255, 255);
+  --header-link-text: rgb(15, 0, 40);
+  --header-link-text-alt: rgb(255, 255, 255);
+  --price-primary-default: rgb(0, 0, 0);
+  --price-secondary-default: rgb(0, 0, 0);
+  --price-strike-default: rgb(201, 25, 17);
+  --price-offer-default: rgb(0, 95, 43);
+  --price-primary-brand: rgb(0, 106, 58);
+  --price-secondary-brand: rgb(0, 0, 0);
+  --price-strike-brand: rgb(98, 98, 98);
+  --price-offer-brand: rgb(0, 106, 58);
+  --price-primary-sale: rgb(201, 25, 17);
+  --price-secondary-sale: rgb(0, 0, 0);
+  --price-strike-sale: rgb(98, 98, 98);
+  --price-offer-sale: rgb(201, 25, 17);
+  --quick-filter-bg-default: rgb(255, 255, 255);
+  --quick-filter-bg-hover: rgb(242, 242, 242);
+  --quick-filter-bg-active: rgb(255, 255, 255);
+  --quick-filter-bg-applied: rgb(222, 247, 241);
+  --quick-filter-text-default: rgb(0, 0, 0);
+  --quick-filter-text-hover: rgb(0, 0, 0);
+  --quick-filter-text-active: rgb(0, 0, 0);
+  --quick-filter-text-applied: rgb(0, 106, 58);
+  --quick-filter-border-default: rgb(229, 229, 229);
+  --quick-filter-border-hover: rgb(204, 204, 204);
+  --quick-filter-border-active: rgb(98, 98, 98);
+  --quick-filter-border-applied: rgb(222, 247, 241);
+  --quick-filter-object: rgb(0, 136, 87);
+  --quick-filter-object-text: rgb(255, 255, 255);
+  --loyalty-primary-bg: rgb(225, 246, 255);
+  --loyalty-primary-media-bg: rgb(248, 248, 248);
+  --loyalty-secondary-bg: rgb(0, 94, 164);
+  --loyalty-secondary-media-bg: rgb(225, 246, 255);
+  --sale-primary-bg: rgb(201, 25, 17);
+  --sale-primary-media-bg: rgb(201, 25, 17);
+  --sale-secondary-bg: rgb(255, 234, 236);
+  --sale-secondary-media-bg: rgb(255, 203, 205);
+  --loyalty-primary-border: rgb(229, 229, 229);
+  --loyalty-secondary-border: rgb(229, 229, 229);
+  --sale-primary-border: rgb(201, 25, 17);
+  --sale-secondary-border: rgb(255, 234, 236);
+  --text-on-loyalty-primary: rgb(15, 0, 40);
+  --text-on-loyalty-primary-object: rgb(255, 255, 255);
+  --text-on-loyalty-secondary: rgb(255, 255, 255);
+  --text-on-sale-secondary-object: rgb(255, 255, 255);
+  --text-on-sale-primary: rgb(255, 255, 255);
+  --text-on-sale-primary-object: rgb(201, 25, 17);
+  --text-on-sale-secondary: rgb(201, 25, 17);
+  --highlight-on-loyalty-primary: rgb(0, 94, 164);
+  --highlight-on-loyalty-secondary: rgb(245, 177, 78);
+  --highlight-on-sale-primary: rgb(255, 255, 255);
+  --highlight-on-sale-secondary: rgb(201, 25, 17);
+  --object-on-loyalty-primary: rgb(0, 177, 254);
+  --object-on-loyalty-secondary: rgb(255, 255, 255);
+  --object-on-sale-primary: rgb(255, 255, 255);
+  --object-on-sale-secondary: rgb(201, 25, 17);
+  --link-on-loyalty-primary: rgb(0, 94, 164);
+  --link-on-loyalty-secondary: rgb(255, 255, 255);
+  --link-on-sale-primary: rgb(255, 255, 255);
+  --link-on-sale-secondary: rgb(201, 25, 17);
+  --space-none: 0rem;
+  --space-050: 0.25rem;
+  --space-100: 0.5rem;
+  --space-150: 0.75rem;
+  --space-200: 1rem;
+  --space-250: 1.25rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+  --space-600: 3rem;
+  --space-800: 4rem;
+  --space-1200: 6rem;
+  --space-1400: 7rem;
+  --bw-none: 0rem;
+  --bw-xs: 0.0625rem;
+  --bw-s: 0.125rem;
+  --bw-m: 0.25rem;
+  --bw-l: 0.5rem;
+  --br-none: 0rem;
+  --br-xxs: 0.25rem;
+  --br-xs: 0.5rem;
+  --br-s: 0.75rem;
+  --br-m: 1rem;
+  --br-l: 1.5rem;
+  --br-xl: 2rem;
+  --br-xxl: 3rem;
+  --br-full: 999rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-heavy: 700;
+  --breakpoint-mobile: 608px;
+  --breakpoint-tablet: 840px;
+  --breakpoint-desktop-small: 1025px;
+  --breakpoint-desktop-large: 1328px;
+  --e-dark-none: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --e-dark-s: 0px 1px 2px 0px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.3);
+  --e-dark-m: 0px 2px 8px 4px rgba(0, 0, 0, 0.2),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  --e-dark-l: 0px 6px 16px 8px rgba(0, 0, 0, 0.15),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  --e-dark-xl: 0px 12px 24px 6px rgba(0, 0, 0, 0.25),
+    0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+  --e-light-none: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --e-light-s: 0px 1px 2px 0px rgba(160, 160, 160, 0.15),
+    0px 1px 3px 1px rgba(160, 160, 160, 0.3);
+  --e-light-m: 0px 2px 8px 4px rgba(160, 160, 160, 0.2),
+    0px 4px 4px 0px rgba(160, 160, 160, 0.3);
+  --e-light-l: 0px 6px 16px 8px rgba(160, 160, 160, 0.15),
+    0px 4px 4px 0px rgba(160, 160, 160, 0.3);
+  --e-light-xl: 0px 12px 24px 6px rgba(160, 160, 160, 0.25),
+    0px 4px 6px 0px rgba(160, 160, 160, 0.25);
+}
+
+/* Typography */
+.ts-display-xxl-normal {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-normal);
+}
+.ts-display-xxl-medium {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-medium);
+}
+.ts-display-xxl-heavy {
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-display-xl-normal {
+  font-size: 2.625rem;
+  line-height: 1.24;
+  font-weight: var(--font-weight-normal);
+}
+.ts-display-xl-medium {
+  font-size: 2.625rem;
+  line-height: 1.24;
+  font-weight: var(--font-weight-medium);
+}
+.ts-display-xl-heavy {
+  font-size: 2.625rem;
+  line-height: 1.24;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-headline-l-normal {
+  font-size: 2.25rem;
+  line-height: 1.22;
+  font-weight: var(--font-weight-normal);
+}
+.ts-headline-l-medium {
+  font-size: 2.25rem;
+  line-height: 1.22;
+  font-weight: var(--font-weight-medium);
+}
+.ts-headline-l-heavy {
+  font-size: 2.25rem;
+  line-height: 1.22;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-headline-m-normal {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-normal);
+}
+.ts-headline-m-medium {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-medium);
+}
+.ts-headline-m-heavy {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-headline-s-normal {
+  font-size: 1.75rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-normal);
+}
+.ts-headline-s-medium {
+  font-size: 1.75rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-medium);
+}
+.ts-headline-s-heavy {
+  font-size: 1.75rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-headline-xs-normal {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-normal);
+}
+.ts-headline-xs-medium {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-medium);
+}
+.ts-headline-xs-heavy {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-subtitle-l-normal {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-normal);
+}
+.ts-subtitle-l-medium {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+}
+.ts-subtitle-l-heavy {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-subtitle-m-normal {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-normal);
+}
+.ts-subtitle-m-medium {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-medium);
+}
+.ts-subtitle-m-heavy {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-subtitle-s-normal {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  font-weight: var(--font-weight-normal);
+}
+.ts-subtitle-s-medium {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  font-weight: var(--font-weight-medium);
+}
+.ts-subtitle-s-heavy {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-body-l-normal {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-normal);
+}
+.ts-body-l-medium {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+}
+.ts-body-l-heavy {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-body-m-normal {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: var(--font-weight-normal);
+}
+.ts-body-m-medium {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: var(--font-weight-medium);
+}
+.ts-body-m-heavy {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-body-s-normal {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-normal);
+}
+.ts-body-s-medium {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-medium);
+}
+.ts-body-s-heavy {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-label-xs-normal {
+  font-size: 0.625rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-normal);
+}
+.ts-label-xs-medium {
+  font-size: 0.625rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-medium);
+}
+.ts-label-xs-heavy {
+  font-size: 0.625rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-button-l-normal {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-normal);
+}
+.ts-button-l-medium {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-medium);
+}
+.ts-button-l-heavy {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-button-m-normal {
+  font-size: 0.875rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-normal);
+}
+.ts-button-m-medium {
+  font-size: 0.875rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-medium);
+}
+.ts-button-m-heavy {
+  font-size: 0.875rem;
+  line-height: 1.28;
+  font-weight: var(--font-weight-heavy);
+}
+.ts-button-s-normal {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-normal);
+}
+.ts-button-s-medium {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-medium);
+}
+.ts-button-s-heavy {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: var(--font-weight-heavy);
+}

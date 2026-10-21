@@ -1,0 +1,540 @@
+{
+    "productType": "CAR_RENTAL",
+    "searchId": "euw1:7e22b5da-58bf-4cf9-a2a6-96a63d313343",
+    "responseTime": "2026-10-12T13:32:50.984150113Z",
+    "cars": [
+        {
+            "id": "CX4itdpYv0z5oqaWpj0xM0NM4QaZRWVJ_72ZPJz-6M6U.411",
+            "vendorId": 321,
+            "pickupLocationId": 203367,
+            "dropOffLocationId": 203367,
+            "vehicle": {
+                "style": "SUV",
+                "description": "SUV",
+                "make": "BMW",
+                "model": "X5 OR SIMILAR",
+                "imageUrl": "https://ctimg-fleet.cartrawler.com/bmw/x5/primary.png",
+                "acrissCode": "PFAR",
+                "doors": 5,
+                "baggageQuantity": 6,
+                "passengerQuantity": 5,
+                "transmission": "Automatic",
+                "fuelType": "Unspecified",
+                "commitment": "similar_model"
+            },
+            "rentalRates": [
+                {
+                    "carId": "CX4itdpYv0z5oqaWpj0xM0NM4QaZRWVJ_72ZPJz-6M6U.411",
+                    "pricing": {
+                        "totalRentalCostRequested": {
+                            "amount": "361.85",
+                            "currency": "EUR"
+                        },
+                        "cancellationPolicy": {
+                            "fee": {
+                                "amount": "180.93",
+                                "currency": "EUR"
+                            },
+                            "applicability": "BeforePickup",
+                            "unitType": "Hour",
+                            "quantity": "48",
+                            "limitTimestamp": "0"
+                        }
+                    },
+                    "deposit": {
+                        "amount": {
+                            "amount": "4950.00",
+                            "currency": "EUR"
+                        },
+                        "minAmount": "0.00",
+                        "maxAmount": "0.00"
+                    },
+                    "fuelPolicy": "FULLFULL",
+                    "mileagePolicy": {
+                        "description": "Limited Mileage:Kilometres included per day: 200",
+                        "taxInclusive": true,
+                        "includedInRate": true,
+                        "distUnitName": "Km",
+                        "quantity": "200",
+                        "vehiclePeriodUnitName": "Day",
+                        "additionalDistance": {
+                            "amount": "0.40",
+                            "currency": "EUR",
+                            "applicability": "BeforePickup"
+                        }
+                    },
+                    "config": {
+                        "orderByRelevance": 0,
+                        "insuranceAvailable": true,
+                        "bundledInsurance": false,
+                        "supportsDebitCard": false,
+                        "paymentType": "PREPAID_IN"
+                    },
+                    "insuranceCoverage": {
+                        "included": [
+                            {
+                                "description": "Collision damage waiver (CDW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "4000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Theft waiver (TW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "4000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Third party liability protection (TP)",
+                                "taxInclusive": true,
+                                "includedInRate": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CX4itdpYv0z5oqaWpj0xM0O2K0W3kgtNNI8F3Av3uaOd.411",
+            "vendorId": 321,
+            "pickupLocationId": 203367,
+            "dropOffLocationId": 203367,
+            "vehicle": {
+                "style": "SUV",
+                "description": "SUV",
+                "make": "BMW",
+                "model": "X3 OR SIMILAR",
+                "imageUrl": "https://ctimg-fleet.cartrawler.com/bmw/x3/primary.png",
+                "acrissCode": "JFAR",
+                "doors": 5,
+                "baggageQuantity": 4,
+                "passengerQuantity": 5,
+                "transmission": "Automatic",
+                "fuelType": "Unspecified",
+                "commitment": "similar_model"
+            },
+            "rentalRates": [
+                {
+                    "carId": "CX4itdpYv0z5oqaWpj0xM0O2K0W3kgtNNI8F3Av3uaOd.411",
+                    "pricing": {
+                        "totalRentalCostRequested": {
+                            "amount": "280.03",
+                            "currency": "EUR"
+                        },
+                        "cancellationPolicy": {
+                            "fee": {
+                                "amount": "140.01",
+                                "currency": "EUR"
+                            },
+                            "applicability": "BeforePickup",
+                            "unitType": "Hour",
+                            "quantity": "48",
+                            "limitTimestamp": "0"
+                        }
+                    },
+                    "deposit": {
+                        "amount": {
+                            "amount": "3000.00",
+                            "currency": "EUR"
+                        },
+                        "minAmount": "0.00",
+                        "maxAmount": "0.00"
+                    },
+                    "fuelPolicy": "FULLFULL",
+                    "mileagePolicy": {
+                        "description": "Limited Mileage:Kilometres included per day: 200",
+                        "taxInclusive": true,
+                        "includedInRate": true,
+                        "distUnitName": "Km",
+                        "quantity": "200",
+                        "vehiclePeriodUnitName": "Day",
+                        "additionalDistance": {
+                            "amount": "0.40",
+                            "currency": "EUR",
+                            "applicability": "BeforePickup"
+                        }
+                    },
+                    "config": {
+                        "orderByRelevance": 0,
+                        "insuranceAvailable": true,
+                        "bundledInsurance": false,
+                        "supportsDebitCard": false,
+                        "paymentType": "PREPAID_IN"
+                    },
+                    "insuranceCoverage": {
+                        "included": [
+                            {
+                                "description": "Collision damage waiver (CDW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "2500.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Theft waiver (TW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "2500.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Third party liability protection (TP)",
+                                "taxInclusive": true,
+                                "includedInRate": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CX4itdpYv0z5oqaWpj0xM0PBl16NDXlC57EtxMphYukl.411",
+            "vendorId": 321,
+            "pickupLocationId": 203367,
+            "dropOffLocationId": 203367,
+            "vehicle": {
+                "style": "COMPACT",
+                "description": "Compact",
+                "make": "Volkswagen",
+                "model": "Golf or similar",
+                "imageUrl": "https://ctimg-fleet.cartrawler.com/volkswagen/golf/primary.png",
+                "acrissCode": "CDAR",
+                "doors": 5,
+                "baggageQuantity": 3,
+                "passengerQuantity": 5,
+                "transmission": "Automatic",
+                "fuelType": "Unspecified",
+                "commitment": "similar_model"
+            },
+            "rentalRates": [
+                {
+                    "carId": "CX4itdpYv0z5oqaWpj0xM0PBl16NDXlC57EtxMphYukl.411",
+                    "pricing": {
+                        "totalRentalCostRequested": {
+                            "amount": "159.66",
+                            "currency": "EUR"
+                        },
+                        "cancellationPolicy": {
+                            "fee": {
+                                "amount": "100.00",
+                                "currency": "EUR"
+                            },
+                            "applicability": "BeforePickup",
+                            "unitType": "Hour",
+                            "quantity": "48",
+                            "limitTimestamp": "0"
+                        }
+                    },
+                    "deposit": {
+                        "amount": {
+                            "amount": "1400.00",
+                            "currency": "EUR"
+                        },
+                        "minAmount": "0.00",
+                        "maxAmount": "0.00"
+                    },
+                    "fuelPolicy": "FULLFULL",
+                    "mileagePolicy": {
+                        "description": "Limited Mileage:Kilometres included per day: 200",
+                        "taxInclusive": true,
+                        "includedInRate": true,
+                        "distUnitName": "Km",
+                        "quantity": "200",
+                        "vehiclePeriodUnitName": "Day",
+                        "additionalDistance": {
+                            "amount": "0.40",
+                            "currency": "EUR",
+                            "applicability": "BeforePickup"
+                        }
+                    },
+                    "config": {
+                        "orderByRelevance": 0,
+                        "insuranceAvailable": true,
+                        "bundledInsurance": false,
+                        "supportsDebitCard": false,
+                        "paymentType": "PREPAID_IN"
+                    },
+                    "insuranceCoverage": {
+                        "included": [
+                            {
+                                "description": "Collision damage waiver (CDW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1200.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Theft waiver (TW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1200.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Third party liability protection (TP)",
+                                "taxInclusive": true,
+                                "includedInRate": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CX4itdpYv0z5oqaWpj0xM0PB08iP4mhAaZWQxsaimCwk.411",
+            "vendorId": 321,
+            "pickupLocationId": 203367,
+            "dropOffLocationId": 203367,
+            "vehicle": {
+                "style": "ECONOMY",
+                "description": "Economy",
+                "make": "Toyota",
+                "model": "Yaris or similar",
+                "imageUrl": "https://ctimg-fleet.cartrawler.com/toyota/yaris/primary.png",
+                "acrissCode": "EDAR",
+                "doors": 5,
+                "baggageQuantity": 2,
+                "passengerQuantity": 5,
+                "transmission": "Automatic",
+                "fuelType": "Unspecified",
+                "commitment": "similar_model"
+            },
+            "rentalRates": [
+                {
+                    "carId": "CX4itdpYv0z5oqaWpj0xM0PB08iP4mhAaZWQxsaimCwk.411",
+                    "pricing": {
+                        "totalRentalCostRequested": {
+                            "amount": "150.58",
+                            "currency": "EUR"
+                        },
+                        "cancellationPolicy": {
+                            "fee": {
+                                "amount": "100.00",
+                                "currency": "EUR"
+                            },
+                            "applicability": "BeforePickup",
+                            "unitType": "Hour",
+                            "quantity": "48",
+                            "limitTimestamp": "0"
+                        }
+                    },
+                    "deposit": {
+                        "amount": {
+                            "amount": "1150.00",
+                            "currency": "EUR"
+                        },
+                        "minAmount": "0.00",
+                        "maxAmount": "0.00"
+                    },
+                    "fuelPolicy": "FULLFULL",
+                    "mileagePolicy": {
+                        "description": "Limited Mileage:Kilometres included per day: 200",
+                        "taxInclusive": true,
+                        "includedInRate": true,
+                        "distUnitName": "Km",
+                        "quantity": "200",
+                        "vehiclePeriodUnitName": "Day",
+                        "additionalDistance": {
+                            "amount": "0.40",
+                            "currency": "EUR",
+                            "applicability": "BeforePickup"
+                        }
+                    },
+                    "config": {
+                        "orderByRelevance": 0,
+                        "insuranceAvailable": true,
+                        "bundledInsurance": false,
+                        "supportsDebitCard": false,
+                        "paymentType": "PREPAID_IN"
+                    },
+                    "insuranceCoverage": {
+                        "included": [
+                            {
+                                "description": "Collision damage waiver (CDW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Theft waiver (TW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Third party liability protection (TP)",
+                                "taxInclusive": true,
+                                "includedInRate": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "CX4itdpYv0z5oqaWpj0xM0M4FvxQ_YdPqaMCQ3HYossM.411",
+            "vendorId": 321,
+            "pickupLocationId": 203367,
+            "dropOffLocationId": 203367,
+            "vehicle": {
+                "style": "ECONOMY",
+                "description": "Economy",
+                "make": "Opel",
+                "model": "Corsa or similar",
+                "imageUrl": "https://ctimg-fleet.cartrawler.com/opel/corsa-3dr/primary.png",
+                "acrissCode": "ECMR",
+                "doors": 3,
+                "baggageQuantity": 2,
+                "passengerQuantity": 5,
+                "transmission": "Manual",
+                "fuelType": "Unspecified",
+                "commitment": "similar_model"
+            },
+            "rentalRates": [
+                {
+                    "carId": "CX4itdpYv0z5oqaWpj0xM0M4FvxQ_YdPqaMCQ3HYossM.411",
+                    "pricing": {
+                        "totalRentalCostRequested": {
+                            "amount": "132.34",
+                            "currency": "EUR"
+                        },
+                        "cancellationPolicy": {
+                            "fee": {
+                                "amount": "100.00",
+                                "currency": "EUR"
+                            },
+                            "applicability": "BeforePickup",
+                            "unitType": "Hour",
+                            "quantity": "48",
+                            "limitTimestamp": "0"
+                        }
+                    },
+                    "deposit": {
+                        "amount": {
+                            "amount": "1150.00",
+                            "currency": "EUR"
+                        },
+                        "minAmount": "0.00",
+                        "maxAmount": "0.00"
+                    },
+                    "fuelPolicy": "FULLFULL",
+                    "mileagePolicy": {
+                        "description": "Limited Mileage:Kilometres included per day: 200",
+                        "taxInclusive": true,
+                        "includedInRate": true,
+                        "distUnitName": "Km",
+                        "quantity": "200",
+                        "vehiclePeriodUnitName": "Day",
+                        "additionalDistance": {
+                            "amount": "0.40",
+                            "currency": "EUR",
+                            "applicability": "BeforePickup"
+                        }
+                    },
+                    "config": {
+                        "orderByRelevance": 0,
+                        "insuranceAvailable": true,
+                        "bundledInsurance": false,
+                        "supportsDebitCard": false,
+                        "paymentType": "PREPAID_IN"
+                    },
+                    "insuranceCoverage": {
+                        "included": [
+                            {
+                                "description": "Collision damage waiver (CDW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Theft waiver (TW)",
+                                "taxInclusive": true,
+                                "includedInRate": true,
+                                "deductible": {
+                                    "requestCurrency": {
+                                        "amount": "1000.00",
+                                        "currency": "EUR"
+                                    }
+                                }
+                            },
+                            {
+                                "description": "Third party liability protection (TP)",
+                                "taxInclusive": true,
+                                "includedInRate": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "vendors": {
+        "321": {
+            "name": "NIZA",
+            "imageUrl": "https://ctimg-supplier.cartrawler.com/niza.pdf",
+            "imageSVGUrl": "https://ctimg-svg.cartrawler.com/supplier-images/niza.svg",
+            "imageName": "niza",
+            "flightDetailsRequired": false
+        }
+    },
+    "locations": {
+        "203367": {
+            "name": "Malaga - Airport",
+            "atAirport": true,
+            "atTrainStation": false,
+            "latitude": "36.6733000",
+            "longitude": "-4.4840000",
+            "addressLine": "Avenida García Morato, 40 , AEROPUERTO DE MÁLAGA, Málaga, 29004",
+            "countryCode": "ES",
+            "phoneNumber": "00 34 952 00 22 00",
+            "timezone": "Europe/Madrid",
+            "ratings": {
+                "label": "Good",
+                "reviewScore": "7.7"
+            },
+            "pickupType": "ShuttleToCounterAndCar",
+            "airportCode": "AGP"
+        }
+    }
+}
