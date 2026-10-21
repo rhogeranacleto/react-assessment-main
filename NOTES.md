@@ -90,3 +90,7 @@ No existing variable equals `1.125rem` (the nearest are `--space-200` and `--spa
 Figma shows the green "Free Cancellation" badge on every card, but `src/assets/response.json` has no free cancellation: all 5 rates carry a cancellation fee. With the real data every card therefore renders the neutral "Cancellation fee €X" badge, and the Figma look cannot be reproduced in `npm run dev` or in the `CarList` stories.
 
 The free variant exists in the code (`kind: "free"`, green `--bg-fill-positive-subtle` / `--text-positive`) and can be seen only in Storybook: `Components/CarBlock/Badge` (the `Free`, `WithFee` and `Alternatives` stories) and the `CarBlock` `FreeCancellation` story, whose data is derived from the fixture. How a "free" policy would be detected in a real API response is an assumption (see the spec); confirm it before relying on it.
+
+## Test coverage target (80%) was skipped
+
+The QA agent and the project guidelines set a target of at least 80% coverage. Because this feature is small, we decided to skip measuring it for now: `@vitest/coverage-v8` is not installed and no coverage report was produced. The 62 tests cover the happy paths and the main edge cases (see each `*.test.tsx`), but the 80% figure is unverified. To check it later, add `@vitest/coverage-v8` and run `npx vitest run --coverage`.

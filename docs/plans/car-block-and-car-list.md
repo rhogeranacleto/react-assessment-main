@@ -725,8 +725,8 @@ Awaiting human review: reply approve, or list changes.
 
 ## QA
 
-QA Status: AWAITING HUMAN APPROVAL
-Coverage: not measured (`@vitest/coverage-v8` not installed, not added without approval); estimated by test inventory at well above 80% for the plan's scope (62 tests in 11 files cover every helper, sub-component, CarBlock and CarList success path plus most edge branches)
+QA Status: ACCEPTED by rhoger.anacleto on 2026-10-21
+Coverage: not measured, the 80% target was skipped by decision of rhoger.anacleto because the feature is small (`@vitest/coverage-v8` not installed; see NOTES.md); 62 tests in 11 files cover every helper, sub-component, CarBlock and CarList success path plus most edge branches
 Requirements audit: 22 MET, 3 PARTIAL, 0 MISSING (PARTIAL = plan steps 9, 10, 13 and the visual "matches the design" criterion, which need the human)
 Deferred (not success path): none written, existing tests already cover empty/error/loading states; automated axe checks, `fuel`/`cover` per-breakpoint visibility (CSS only, jsdom cannot verify), `build-storybook` not run by QA
 Gates run by QA: lint pass, test pass (62/62), build pass, format:check fails only on the 5 known untouched files
