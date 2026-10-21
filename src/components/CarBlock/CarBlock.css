@@ -1,0 +1,340 @@
+/* Small (below the mobile breakpoint) base styles; larger sizes override custom properties below. */
+.car-block {
+  --car-block-media-height: var(--space-1400);
+  --car-block-media-inset: var(--space-100);
+  --car-block-padding: var(--space-150);
+  --car-block-gap: var(--space-150);
+  --car-block-body-gap: var(--space-200);
+  --car-block-main-gap: var(--space-100);
+  --car-block-fuel-display: none;
+  --car-block-cover-display: none;
+  --car-block-large-display: none;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--container-default);
+  border: var(--bw-xs) solid var(--border-subtle);
+  border-radius: var(--br-s);
+}
+
+/* Media */
+.car-block__media {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: var(--car-block-media-height);
+  padding: var(--car-block-media-inset);
+  background-color: var(--container-alt);
+}
+
+.car-block__image {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  object-fit: contain;
+}
+
+.car-block__placeholder {
+  inline-size: var(--space-600);
+  block-size: var(--space-600);
+  color: var(--text-disabled);
+}
+
+/* Content */
+.car-block__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--car-block-gap);
+  min-inline-size: 0;
+  padding: var(--car-block-padding);
+}
+
+.car-block__badge {
+  align-self: flex-start;
+  margin: var(--space-none);
+  padding: var(--space-050) var(--space-100);
+  border-radius: var(--br-xxs);
+}
+
+.car-block__badge--free {
+  color: var(--text-positive);
+  background-color: var(--bg-fill-positive-subtle);
+}
+
+.car-block__badge--fee {
+  color: var(--text-subtle);
+  background-color: var(--bg-fill-neutral-subtle);
+}
+
+.car-block__body {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--car-block-body-gap);
+}
+
+.car-block__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--car-block-main-gap);
+  min-inline-size: 0;
+}
+
+.car-block__title {
+  margin: var(--space-none);
+  color: var(--text-default);
+}
+
+.car-block__name {
+  margin: var(--space-none);
+  color: var(--text-grey);
+}
+
+/* Features */
+.car-block__features {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-150);
+  row-gap: var(--space-050);
+  margin: var(--space-none);
+  padding: var(--space-none);
+  color: var(--text-subtle);
+  list-style: none;
+}
+
+.car-block__feature {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-050);
+}
+
+.car-block__feature--fuel {
+  display: var(--car-block-fuel-display);
+}
+
+.car-block__feature--cover {
+  display: var(--car-block-cover-display);
+}
+
+.car-block__feature-icon {
+  flex-shrink: 0;
+  inline-size: var(--space-200);
+  block-size: var(--space-200);
+}
+
+/* Location */
+.car-block__location-name {
+  margin: var(--space-none);
+  color: var(--text-brand-primary);
+}
+
+.car-block__pickup-type {
+  margin: var(--space-none);
+  color: var(--text-grey);
+}
+
+/* Important information link */
+.car-block__link {
+  display: var(--car-block-large-display);
+  align-self: flex-start;
+  padding: var(--space-none);
+  color: var(--link-brand-default);
+  text-decoration: underline;
+  text-decoration-thickness: var(--bw-xs);
+  background-color: var(--bg-fill-transparent);
+  border: var(--bw-none);
+  cursor: pointer;
+}
+
+.car-block__link:hover {
+  color: var(--link-brand-hover);
+}
+
+.car-block__link:focus-visible,
+.car-block__select:focus-visible {
+  outline: var(--bw-s) solid var(--border-focus);
+  outline-offset: var(--space-050);
+}
+
+/* Aside: vendor, price, select */
+.car-block__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-100);
+  text-align: end;
+}
+
+.car-block__vendor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-050);
+}
+
+.car-block__vendor-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-100);
+  padding: var(--space-050);
+  background-color: var(--container-default);
+  border: var(--bw-xs) solid var(--border-subtle);
+  border-radius: var(--br-xxs);
+}
+
+.car-block__vendor-logo {
+  block-size: var(--space-250);
+  inline-size: auto;
+}
+
+.car-block__vendor-name {
+  color: var(--text-default);
+}
+
+.car-block__rating-chip {
+  padding: var(--space-none) var(--space-050);
+  color: var(--text-inverse);
+  background-color: var(--ratings-average);
+  border-radius: var(--br-xxs);
+}
+
+.car-block__rating-chip[data-tone="excellent"] {
+  background-color: var(--ratings-excellent);
+}
+
+.car-block__rating-chip[data-tone="very-good"] {
+  background-color: var(--ratings-very-good);
+}
+
+.car-block__rating-chip[data-tone="good"] {
+  background-color: var(--ratings-good);
+}
+
+.car-block__rating-chip[data-tone="average"] {
+  background-color: var(--ratings-average);
+}
+
+.car-block__rating-chip[data-tone="poor"] {
+  background-color: var(--ratings-poor);
+}
+
+.car-block__rating-label {
+  color: var(--text-default);
+}
+
+.car-block__buy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.car-block__price,
+.car-block__price-main,
+.car-block__price-total,
+.car-block__price-unavailable {
+  margin: var(--space-none);
+}
+
+.car-block__price-amount,
+.car-block__price-unit {
+  color: var(--price-primary-default);
+}
+
+.car-block__price-total,
+.car-block__price-unavailable {
+  color: var(--text-grey);
+}
+
+.car-block__select {
+  display: var(--car-block-large-display);
+  margin-block-start: var(--space-150);
+  padding: var(--space-150) var(--space-300);
+  color: var(--button-text-primary);
+  background-color: var(--button-bg-primary);
+  border: var(--bw-xs) solid var(--button-border-primary);
+  border-radius: var(--br-xs);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.car-block__select:hover {
+  background-color: var(--button-bg-primary-hover);
+  border-color: var(--button-border-primary-hover);
+}
+
+.car-block__select:active {
+  background-color: var(--button-bg-primary-active);
+  border-color: var(--button-border-primary-active);
+}
+
+/* Visually hidden text (no utility in the design system). */
+.car-block__sr-only {
+  position: absolute;
+  inline-size: var(--bw-xs);
+  block-size: var(--bw-xs);
+  margin: calc(var(--bw-xs) * -1);
+  padding: var(--space-none);
+  overflow: hidden;
+  white-space: nowrap;
+  border: var(--bw-none);
+  clip-path: inset(50%);
+}
+
+/* Medium: 400px, a temporary value for visual checks (design-system
+   --breakpoint-mobile is 608px) */
+@media (min-width: 400px) {
+  .car-block {
+    --car-block-media-height: calc(var(--space-1400) + var(--space-200));
+    --car-block-padding: var(--space-200);
+    --car-block-fuel-display: inline-flex;
+  }
+
+  /* Figma: Subtitle-S (heavy) on Medium. The weight comes from the title's
+     .ts-body-l-heavy class. */
+  .car-block__title {
+    font-size: var(--font-size-subtitle-s);
+    line-height: var(--line-height-subtitle-s);
+  }
+}
+
+/* Large: 700px, a temporary value for visual checks (design-system
+   --breakpoint-tablet is 840px) */
+@media (min-width: 700px) {
+  .car-block {
+    --car-block-media-height: auto;
+    --car-block-media-inset: var(--space-200);
+    --car-block-main-gap: var(--space-150);
+    --car-block-cover-display: inline-flex;
+    --car-block-large-display: inline-block;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  /* Figma: Subtitle-M (heavy) on Large and XL. --space-250 is the same
+     1.25rem and --space-400 the same 2rem (1.25rem x 1.6). See NOTES.md. */
+  .car-block__title {
+    font-size: var(--space-250);
+    line-height: var(--space-400);
+  }
+
+  .car-block__media {
+    border-inline-end: var(--bw-xs) solid var(--border-subtle);
+  }
+
+  .car-block__link {
+    /* Total gap after the location is --space-200 */
+    margin-block-start: calc(var(--space-200) - var(--car-block-main-gap));
+  }
+}
+
+/* XL: 870px, a temporary value for visual checks (design-system
+   --breakpoint-desktop-small is 1025px) */
+@media (min-width: 870px) {
+  .car-block {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+}
